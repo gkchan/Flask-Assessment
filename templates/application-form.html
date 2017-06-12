@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Application Form{% endblock %}
+
+{% block content %} 
+
+	<div class="container">
+		<div class=row>
+			<div class="col-xs-offset-2 col-xs-8">
+				<h1>Welcome to our job application site!</h1>
+				<p id="border">Please answer the questions below and provide us with your name, salary requirement, and job you are applying for.</p>
+			</div>
+		</div>
+		<div class=row>
+			<div class="col-xs-offset-2 col-xs-4">
+				<form action="/application-success" method="POST">
+					First Name: <input type="text" name="firstname" class="yellowbg"><br>
+					<b>Last Name: <input type="text" name="lastname" class="yellowbg"></b><br>
+					<!-- was going to make type a number, but instructions wanted a possible decimal currency format -->
+					<!-- 	Salary Requirement: <input type="number" name="salaryreq" class="yellowbg"><br> -->
+					Salary Requirement: <input type="text" name="salaryreq" class="yellowbg"><br>
+					Job:
+						<select name="jobtitle" class="yellowbg"> 
+							<option value="software engineer">Software Engineer</option>
+							<option value="QA engineer">QA Engineer</option>
+							<option value="product manager">Product Manager</option><br>
+					<input type="submit" class="yellowbg">
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+{% endblock %}
+
+
+

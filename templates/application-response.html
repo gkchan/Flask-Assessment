@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Application Response {% endblock %}
+
+
+{% block content %} 
+
+	Thank you, {{ firstname }} {{ lastname }}, for applying to be a {{ jobtitle }}. Your minimum salary requirement is ${{ salaryreq }}.
+	
+<!-- 	Not entirely sure what you wanted us to do with the loop:
+	Thank you, {{ firstname }} {{ lastname }}, for applying to be a <ul> {% for title in jobtitle %} <li>{{ title }}</li> {%  endfor %} </ul>. Your minimum salary requirement is ${{ salaryreq }}. -->
+
+{% endblock %}
+
